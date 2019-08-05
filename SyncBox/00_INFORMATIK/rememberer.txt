@@ -14,10 +14,16 @@ STORE DOTFILES VIA GIT:
 	USE THE ALIAS "config" LIKE USALLY "git" IS USED: (examples)
 	dotgit status
 	dotgit add .vimrc
-	dotgit commit -m "Add vimrc"
-	dotgit add .bashrc
-	dotgit commit -m "Add bashrc"
-	dotgit push
+	dotgit commit -a
+
+	PUSH TO GITHUB:
+	...set origin:
+	$ dotgit remote add origin https://github.com/chischte/dotfiles.git
+	...verify remote origin:
+	$ dotgit remote -v
+	...push files
+	$ dotgit push -u origin master
+	...enter username and password
 *******************************************************************
 INSTALL DOTFILES ONTO A NEW SYSTEM:
 	FROM TUTORIAL: https://www.atlassian.com/git/tutorials/dotfiles
