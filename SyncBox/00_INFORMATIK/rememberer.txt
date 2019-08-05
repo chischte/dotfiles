@@ -3,12 +3,13 @@ STORE DOTFILES VIA GIT:
 *******************************************************************
 	FROM TUTORIAL: https://www.atlassian.com/git/tutorials/dotfiles
 	CREATE A BARE REPOSITORY:
-	$ git init --bare $HOME/.cfg
+	create folder ~/GIT/dotfiles
+	$ git init --bare ~/GIT/dotfiles
 
 	CREATE ALIAS "dotgit" TO INTERACT WITH THE REPOSIORY:
-	$ alias dotgit='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+	$ alias dotgit="/usr/bin/git --git-dir=$HOME/GIT/dotfiles/ --work-tree=$HOME"
+
 	$ dotgit config --local status.showUntrackedFiles no
-	$ echo "alias dotgit='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
 
 	USE THE ALIAS "config" LIKE USALLY "git" IS USED: (examples)
 	dotgit status
