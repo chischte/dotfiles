@@ -1,10 +1,19 @@
 ﻿*******************************************************************
+ToDo:
+*******************************************************************
+...restore dotfiles on bodechischte
+
+*******************************************************************
+ADD EXISTING GITHUB PROJECT TO ECLIPSE:
+*******************************************************************
+	USE ECLIPSE IMPORT>GIT>SMARTIMPORT
+*******************************************************************
 STORE DOTFILES VIA GIT:
 *******************************************************************
 	FROM TUTORIAL: https://www.atlassian.com/git/tutorials/dotfiles
 	CREATE A BARE REPOSITORY:
-	create folder ~/GIT/dotfiles
-	$ git init --bare ~/GIT/dotfiles
+	create folder ~/git/dotfiles
+	$ git init --bare ~/git/dotfiles
 
 	CREATE ALIAS "dotgit" TO INTERACT WITH THE REPOSIORY:
 	$ alias dotgit="/usr/bin/git --git-dir=$HOME/GIT/dotfiles/ --work-tree=$HOME"
@@ -22,29 +31,23 @@ STORE DOTFILES VIA GIT:
 	...verify remote origin:
 	$ dotgit remote -v
 	...push files
-	$ dotgit push -u origin master
+	$ dotgit push origin master
 	...enter username and password
 *******************************************************************
 INSTALL DOTFILES ONTO A NEW SYSTEM:
+*******************************************************************
 	FROM TUTORIAL: https://www.atlassian.com/git/tutorials/dotfiles
-	ADD ALIAS TO bash.bashrc:
-	alias dotgit='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+	ADD ALIAS TO .bashrc:
+	alias dotgit="/usr/bin/git --git-dir=$HOME/GIT/dotfiles/ --work-tree=$HOME"
 	IGNORE THE SOURCEFOLDER ITSELF:
 	echo ".cfg" >> .gitignore
 	CLONE DOTFILES INTO A BARE REPOSITORY:
-	git clone --bare <git-repo-url> $HOME/.cfg
-	DEFINE THE ALIAS IN THE CURRENT SHELL:
-	alias dotgit='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+	$ git clone --bare https://github.com/chischte/dotfiles.git $HOME/git/dotfiles
 	REMOVE THE STOCK CONFIG FILES
 	CHECKOUT THE DOTFILE CONTENT TO THE $HOME FOLDER:
-	$dotgit checkout
-	$dotgit config --local status.showUntrackedFiles no
+	$ dotgit checkout
+	$ dotgit config --local status.showUntrackedFiles no
 	...DONE.
-
-*******************************************************************
-*******************************************************************
-*******************************************************************
-
 
 *******************************************************************
 CONNECT TO CELLULAR NETWORK USING A SIM CARD
@@ -752,4 +755,5 @@ ARCHIVE / OLD UNUSED STUFF
 	...when asked: use system proxysettings
 	??? how and what to upload
 	???????????
+
 
