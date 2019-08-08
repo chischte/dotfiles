@@ -1,7 +1,13 @@
 ﻿*******************************************************************
 ToDo:
 *******************************************************************
+...create timeshift snapshot on flugchischte
+...update flugchischte ignore lid closed parameter
 ...restore dotfiles on bodechischte
+...clean up github code!!! ...create readmy with "goodies list"
+...separate commit for rememberer?
+...Synology router zurückgeben, Fehlerbeschrieb erstellen
+...TypingTrainer!!!
 
 *******************************************************************
 ADD EXISTING GITHUB PROJECT TO ECLIPSE:
@@ -187,43 +193,43 @@ CONNECT TO CELLULAR NETWORK USING A SIM CARD
 
 
 ***********************************************************
-*** SYSTEM SETUP STEPS  
+*** SYSTEM SETUP STEPS / INSTALLATION AND USE OF PROGRAMS
 ***********************************************************
-    ***********************************************************
-    *** SETUP DUAL BOOT LINUX MINT / WINDOWS 10 (UEFI)
-    ***********************************************************
-        This is what worked, not sure if everithing is necessary
-        (installing Windows first may be also an option to check out!)        
-        in Startup Menu (BIOS) change from BIOS to UEFI
-        deactivate Legacy support
-        Secure Boot is deactivated
-        Install linux mint standard (not "something else installation")
-        Deactivate checkbox "installation of third party software"
-        Start linux with usb stick and make linux partition smaller usin Gparted to make space for windows installation (102400MB)
-        Install Windows 
+	***********************************************************
+	*** SETUP DUAL BOOT LINUX MINT / WINDOWS 10 (UEFI)
+ 	***********************************************************
+		This is what worked, not sure if everything is necessary
+	        (installing Windows first may be also an option to check out!)        
+        	in Startup Menu (BIOS) change from BIOS to UEFI
+	        deactivate Legacy support
+	        Secure Boot is deactivated
+	        Install linux mint standard (not "something else installation")
+	        Deactivate checkbox "installation of third party software"
+	        Start linux with usb stick and make linux partition smaller usin Gparted to make space for windows installation (102400MB)
+	        Install Windows 
 	****************************************
 	Windows 10 OEM Product Key XXXX (stored on passwordmanager)
 	****************************************
-        Boot with linux usb stick
-        install and run boot-repair
-        boot into linux
-        use grub-customizer to cusomize dual boot menu
-        
-        After the installation i shrunk the linux os partition to 100GB to create a separate home partition
-        the 512 GB HD is now divided as followed:
-        100GB Linux OS
-        270GB Linux HOME
-        100GB Windows
+	        Boot with linux usb stick
+	        install and run boot-repair
+	        boot into linux
+	        use grub-customizer to cusomize dual boot menu
+	        
+        	After the installation i shrunk the linux os partition to 100GB to create a separate home partition
+	        the 512 GB HD is now divided as followed:
+	        100GB Linux OS
+	        270GB Linux HOME
+	        100GB Windows
 
-        How to reallocate home folder:
-        https://help.ubuntu.com/community/Partitioning/Home/Moving
+	        How to reallocate home folder:
+	        https://help.ubuntu.com/community/Partitioning/Home/Moving
     
-    ***********************************************************
-    *** SETUP DUAL BOOT LINUX MINT / WINDOWS 10 (legacy BIOS)
-    ***********************************************************
-	    ...if Linux is allready installed
-    	$ sudo apt install gparted ...create partition for Windows 10
-	    After installing Windows 10 on a separate Primary Partition, Windows will start directly
+	***********************************************************
+	*** SETUP DUAL BOOT LINUX MINT / WINDOWS 10 (legacy BIOS)
+	***********************************************************
+		...if Linux is allready installed
+	    	$ sudo apt install gparted ...create partition for Windows 10
+		After installing Windows 10 on a separate Primary Partition, Windows will start directly
 		To enable dual boot the GRUB bootloader has to be reinstalled
 		1) start ubuntu usin linux mint installer usb stick
 		2) Install Boot-Repair from command line:
@@ -288,14 +294,14 @@ CONNECT TO CELLULAR NETWORK USING A SIM CARD
 	***********************************************************
 	*** INSTALL DEFAULT JAVA 
 	***********************************************************
-        sudo dpkg --configure -a		
-        sudo apt-get update
-        sudo apt-get upgrade
+        	sudo dpkg --configure -a		
+	        sudo apt-get update
+	        sudo apt-get upgrade
 		sudo apt-get install default-jdk
 		java -version shows: openjdk version "11.0.3" 2019-04-16
 		
 		SET JAVA HOME VARIABLE IN /etc/bash.bashrc #all users:
-        export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
+        	export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
 		export PATH=$JAVA_HOME/bin:$PATH
 
 		which java shows: /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java
@@ -354,7 +360,7 @@ CONNECT TO CELLULAR NETWORK USING A SIM CARD
 		*********	
 		INSTALL WINDOWBUILDER:
 
-    Eclipse\Help\Install new software\"Swing Designer"
+    		Eclipse\Help\Install new software\"Swing Designer"
 		...Windowbuilder is included
 		**********************************	
 
@@ -506,18 +512,8 @@ CONNECT TO CELLULAR NETWORK USING A SIM CARD
   ClaudiGaudi0815
   Login to HaudiGaudiNetz go to 192.168.0.1
   Connect to erk58418 (via universal repeater)
-  SPInelli.1.2.3.
-***********************************************************
-*** INSTALL WINE  
-***********************************************************
-	sudo dpkg --add-architecture i386
-	wget -nc https://dl.winehq.org/wine-builds/winehq.key
-	sudo apt-key add winehq.key
-	sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ cosmic main'
-	sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
-	sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
-	sudo apt-get update
-	sudo apt-get install --install-recommends winehq-stable
+  PASS=XXXX (stored on passwordmanager)
+
 ***********************************************************
 *** INSTALL WIRESHARK
 ***********************************************************
@@ -527,6 +523,9 @@ CONNECT TO CELLULAR NETWORK USING A SIM CARD
 	Couldn't run /usr/bin/dumpcap in child process: Permission denied
 	...works after short command line entry and restart
 
+
+
+
 ***********************************************************
 ***********************************************************
 ***********************************************************
@@ -534,6 +533,25 @@ ARCHIVE / OLD UNUSED STUFF
 ***********************************************************
 ***********************************************************
 ***********************************************************
+	***********************************************************
+	*** INSTALL WINE  
+	***********************************************************
+		sudo dpkg --add-architecture i386
+		wget -nc https://dl.winehq.org/wine-builds/winehq.key
+		sudo apt-key add winehq.key
+		sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ cosmic main'
+		sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+		sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
+		sudo apt-get update
+		sudo apt-get install --install-recommends winehq-stable	
+
+	*******************************************************************
+	PREVENT EXTERNAL SCREEN FROM TURNING OF ON DOCKINGSTSTION:
+	*******************************************************************
+		sudo vim /etc/UPower/UPower.conf
+		change ignoreLid from false to true
+		ignoreLid=true
+		...sudo service upower restart (or reboot)
 
 	***********************************************************
 	*** INSTALL ECLIM / 
@@ -582,7 +600,7 @@ ARCHIVE / OLD UNUSED STUFF
 	***********************************************************
 		...change opt user to allow software installation:
 		sudo chown -R $USER:$USER /opt/
-	***********************************************************
+		***********************************************************
 	*** CREATE ECLIM JAVA PROJECT
 	***********************************************************
 		start eclimd
@@ -602,158 +620,146 @@ ARCHIVE / OLD UNUSED STUFF
 		move netbeans to /opt/
 		add path to /etc/bash.bashrc:
 		export PATH="/opt/netbeans/bin:$PATH"
-	*** SYNCHRONIZE FTP / aliases "hi, hey and bye" / various aliases
 	***********************************************************
-
-
-***********************************************************
-	*** SYNCHRONIZE FTP / aliases "hi, hey and bye" / various aliases
+	*** SYNCHRONIZE FTP / aliases "hi, hey and bye"
 	***********************************************************
 		sudo apt-get install lftp
 		create bash script /usr/local/bin/ftp-push.sh:
 			****************************
-			#!/bin/bash
-			#create a ZIP of the current GIT folder
-			cd ~/SyncBox/
-			zip -r GIT.zip GIT
-			#move the zipped folder to the emptied transferfolder
-			rm -rf ~/.ftptransfer
-			mkdir  ~/.ftptransfer
-			mv GIT.zip ~/.ftptransfer/
-
-			#upload the new zipped GIT folder
-
-			HOST='0m2pd.ftp.infomaniak.com'
-			USER='0m2pd_git'
-			PASS=XXXX (stored on passwordmanager)
-			TARGETFOLDER='/'
-			SOURCEFOLDER='~/.ftptransfer/'
-
-			lftp -f " 
-			open $HOST
-			user $USER $PASS
-			lcd $SOURCEFOLDER
-			mirror --reverse --delete --verbose $SOURCEFOLDER $TARGETFOLDER
-			bye
-			"
-			#delete the local GIT.zip archive
-			#rm ~/.ftptransfer/GIT.zip
-			****************************
+		#!/bin/bash
+		#create a ZIP of the current GIT folder
+		cd ~/SyncBox/
+		zip -r GIT.zip GIT
+		#move the zipped folder to the emptied transferfolder
+		rm -rf ~/.ftptransfer
+		mkdir  ~/.ftptransfer
+		mv GIT.zip ~/.ftptransfer/
+		#upload the new zipped GIT folder
+		HOST='0m2pd.ftp.infomaniak.com'
+		USER='0m2pd_git'
+		PASS=XXXX (stored on passwordmanager)
+		TARGETFOLDER='/'
+		SOURCEFOLDER='~/.ftptransfer/'
+		lftp -f " 
+		open $HOST
+		user $USER $PASS
+		lcd $SOURCEFOLDER
+		mirror --reverse --delete --verbose $SOURCEFOLDER $TARGETFOLDER
+		bye
+		"
+		#delete the local GIT.zip archive
+		#rm ~/.ftptransfer/GIT.zip
+		****************************
 		create bash script /usr/local/bin/ftp-pull.sh:
-				****************************
-			#!/bin/bash
-			#delete previous GIT.zip
-			rm -rf ~/.ftptransfer/GIT.zip
+		****************************
+		#!/bin/bash
+		#delete previous GIT.zip
+		rm -rf ~/.ftptransfer/GIT.zip
 
-			#download latest GIT.zip from FTP
-			HOST='0m2pd.ftp.infomaniak.com'
-			USER='0m2pd_git'
-			PASS=XXXX (stored on passwordmanager)
-			TARGETFOLDER='~/.ftptransfer'
-			SOURCEFOLDER='/'
+		#download latest GIT.zip from FTP
+		HOST='0m2pd.ftp.infomaniak.com'
+		USER='0m2pd_git'
+		PASS=XXXX (stored on passwordmanager)
+		TARGETFOLDER='~/.ftptransfer'
+		SOURCEFOLDER='/'
 
-			lftp -f " 
-			open $HOST
-			user $USER $PASS
-			lcd $SOURCEFOLDER
-			mirror --delete --verbose $SOURCEFOLDER $TARGETFOLDER
-			bye
-			"
-			#unzip downloaded GIT.zip
-			cd ~/.ftptransfer
-			unzip GIT.zip
-			#move local GIT to a save location in case of anything goes wrong
-			rm -rf previousGIT
-			mkdir previousGIT
-			mv ~/SyncBox/GIT/ ~/.ftptransfer/previousGIT/
-			#move newly downloaded and unzipped GIT to the correct location
-			mv ~/.ftptransfer/GIT ~/SyncBox/GIT
-			#delete zipped archive
-			#rm ~/.ftptransfer/GIT.zip
-			****************************
-	    ***********************************************************
-	...run alias "hi" to download git folder and open remember.txt
+		lftp -f " 
+		open $HOST
+		user $USER $PASS
+		lcd $SOURCEFOLDER
+		mirror --delete --verbose $SOURCEFOLDER $TARGETFOLDER
+		bye
+		"
+		#unzip downloaded GIT.zip
+		cd ~/.ftptransfer
+		unzip GIT.zip
+		#move local GIT to a save location in case of anything goes wrong
+		rm -rf previousGIT
+		mkdir previousGIT
+		mv ~/SyncBox/GIT/ ~/.ftptransfer/previousGIT/
+		#move newly downloaded and unzipped GIT to the correct location
+		mv ~/.ftptransfer/GIT ~/SyncBox/GIT
+		#delete zipped archive
+		#rm ~/.ftptransfer/GIT.zip
+		****************************
+		
+	***********************************************************
+	*** WLAN LOGIN STEPS
+	***********************************************************
+		*** GET INTERFACE NAME
+		ifconfig -a ...shows interface name
+		...name of the wireless interface is wlp2s0 (not wlan0)
 	
-***********************************************************
-*** WLAN LOGIN STEPS
-***********************************************************
-	*** GET INTERFACE NAME
-	ifconfig -a ...shows interface name
-	...name of the wireless interface is wlp2s0 (not wlan0)
-
-	*** SHOW AVAILABLE NETWORKS
-	nmcli dev wifi
-	nmcli dev wifi rescan ...run a rescan
-	*** NOT WORKING !!!: CONNECT TO A WIFI WPA NETWORK
-	linuxcommando.blogspot.com/2013/10/how-to-connect-to-wpawpa2-wifi-network.html
-	sudo apt-get install wpasupplicant ...was already installed
-	sudo -s ...change to root user
-	sudo wpa_passphrase AndroidAP >> /etc/wpa_supplicant.conf
-	...type in passphrase (will be stored in "/etc/wpa_supplicant.conf
-	sudo wpa_supplicant -B -D wext -i wlp2s0 -c /etc/wpa_supplicant.conf
-	error: ioctl[SIOCSIWENCODEEXT]: Invalid argument
-***********************************************************
-*** COMBINING NETBEANS AND ECLIM
-***********************************************************
-	Create Netbeans Project
-	Close Netbeans
-	Start Eclim Server
-	Vim :ProjectCreate same/path/ -n java
-	...Edit GUI.java on Netbeans
-	...chekcout if editing GUI on vim is also permissible
-	...Edit other .javas with vim or netbeans.
+		*** SHOW AVAILABLE NETWORKS
+		nmcli dev wifi
+		nmcli dev wifi rescan ...run a rescan
+		*** NOT WORKING !!!: CONNECT TO A WIFI WPA NETWORK
+		linuxcommando.blogspot.com/2013/10/how-to-connect-to-wpawpa2-wifi-network.html
+		sudo apt-get install wpasupplicant ...was already installed
+		sudo -s ...change to root user
+		sudo wpa_passphrase AndroidAP >> /etc/wpa_supplicant.conf
+		...type in passphrase (will be stored in "/etc/wpa_supplicant.conf
+		sudo wpa_supplicant -B -D wext -i wlp2s0 -c /etc/wpa_supplicant.conf
+		error: ioctl[SIOCSIWENCODEEXT]: Invalid argument
+	***********************************************************
+	*** COMBINING NETBEANS AND ECLIM
+	***********************************************************
+		Create Netbeans Project
+		Close Netbeans
+		Start Eclim Server
+		Vim :ProjectCreate same/path/ -n java
+		...Edit GUI.java on Netbeans
+		...chekcout if editing GUI on vim is also permissible
+		...Edit other .javas with vim or netbeans.
 
 
-***********************************************************
-***USING VIM TO COMPILE ARDUINO CODE
-***********************************************************
-	https://hardwarefun.com/tutorials/compiling-arduino-sketches-using-makefile
-	git clone https://github.com/sudar/Arduino-Makefile
-	directory: ~/GIT/Arduino/Arduino-Makefile
-	create makefile: touch ~/GIT/Arduino/Projects/sketch_xy/Makefile ...add:
-	*****************************
-	ARDUINO_DIR = /opt/arduino-1.8.8
-	ARDMK_DIR = /home/realslimshady/GIT/Arduino/Arduino-Makefile	
-	BOARD_TAG = nano
-	include $(ARDMK_DIR)/Arduino.mk
-	*****************************
-	:make ...gives error in vim,  no error in command line
-	:make upload ...gives error anyway
+	***********************************************************
+	***USING VIM TO COMPILE ARDUINO CODE
+	***********************************************************
+		https://hardwarefun.com/tutorials/compiling-arduino-sketches-using-makefile
+		git clone https://github.com/sudar/Arduino-Makefile
+		directory: ~/GIT/Arduino/Arduino-Makefile
+		create makefile: touch ~/GIT/Arduino/Projects/sketch_xy/Makefile ...add:
+		*****************************
+		ARDUINO_DIR = /opt/arduino-1.8.8
+		ARDMK_DIR = /home/realslimshady/GIT/Arduino/Arduino-Makefile	
+		BOARD_TAG = nano
+		include $(ARDMK_DIR)/Arduino.mk
+		*****************************
+		:make ...gives error in vim,  no error in command line
+		:make upload ...gives error anyway
 
-	sudo apt-get install libdevice-serialport-perl
-	sudo apt-get install libyaml-perl
-	...added to Makefile:
-	AVR_TOOLS_DIR = /opt/arduino-1.8.8/hardware/tools/avr
-	ARDUINO_PORT = /dev/ttyACM3
+		sudo apt-get install libdevice-serialport-perl
+		sudo apt-get install libyaml-perl
+		...added to Makefile:
+		AVR_TOOLS_DIR = /opt/arduino-1.8.8/hardware/tools/avr
+		ARDUINO_PORT = /dev/ttyACM3
+		
+		:!make show_boards ...shows the boards list
+		
+		...TODO: use make -d ..."debug"
+		...TODO: study installation instructions: https://github.com/sudar/Arduino-Makefile
+		...TODO: study instructions in makefile
+		...TODO when succesfully uploaded to nano or uno, try to make contrlino work as well
+		...TODO: when upload is working, implement other tipps from here as well
+		https://collectiveidea.com/blog/archives/2017/04/05/arduino-programming-in-vim
 	
-	:!make show_boards ...shows the boards list
-	
-	...TODO: use make -d ..."debug"
-	...TODO: study installation instructions: https://github.com/sudar/Arduino-Makefile
-	...TODO: study instructions in makefile
-	...TODO when succesfully uploaded to nano or uno, try to make contrlino work as well
-	...TODO: when upload is working, implement other tipps from here as well
-	https://collectiveidea.com/blog/archives/2017/04/05/arduino-programming-in-vim
-
-	*** USING ECLIPSE
-	Install Eclipse C++ IDE for Arduino 3.0 using the Eclipse Marketplace
-***********************************************************
-*** CONNECT STM CHIP  
-***********************************************************
-	dmesg | grep usb ...lists usb devices
-	
-	*INSTALL STM32CubeMX
-	Download Version 5.01 from ST.com
-	mv en.stm32cubemx.zip to /opt/
-	sudo unzip en.stm32cubemx.zip 
-	...change opt user
-	sudo chown -R $USER:$USER /opt/
-	./SetupSTM32CubeMX-5.0.1.linux 
-	...the installer launches
-	...choose installation path /opt/STM32CubeMX
-	...start with ./
-	...when asked: use system proxysettings
-	??? how and what to upload
-	???????????
-
-
+		*** USING ECLIPSE
+		Install Eclipse C++ IDE for Arduino 3.0 using the Eclipse Marketplace
+	***********************************************************
+	*** CONNECT STM CHIP  
+	***********************************************************
+		dmesg | grep usb ...lists usb devices
+		
+		*INSTALL STM32CubeMX
+		Download Version 5.01 from ST.com
+		mv en.stm32cubemx.zip to /opt/
+		sudo unzip en.stm32cubemx.zip 
+		...change opt user
+		sudo chown -R $USER:$USER /opt/
+		./SetupSTM32CubeMX-5.0.1.linux 
+		...the installer launches
+		...choose installation path /opt/STM32CubeMX
+		...start with ./
+		...when asked: use system proxysettings
+		...how and what to upload ???
