@@ -24,3 +24,8 @@ let ruby_fold=1               " Ruby
 let sh_fold_enabled=1         " sh
 let vimsyn_folding='af'       " Vim script
 let xml_syntax_folding=1      " XML
+
+" Turn on persistent undo
+" means: you can undo even after closing a buffer or even after closing vim
+set undodir=~/.vim/temp/undo
+set undofile
