@@ -150,4 +150,5 @@ export PATH=$JAVA_HOME/bin:$PATH
 #export PATH="/opt/eclipse:$PATH"
 export PATH="/snap/bin:$PATH"
 alias eclipsejava="cd /opt/eclipsejava/eclipse; ./eclipse"
+alias eclipsecpp="cd /opt/eclipsecpp/eclipse; ./eclipse"
 alias dotgit="/usr/bin/git --git-dir=$HOME/git/dotfiles/ --work-tree=$HOME"
