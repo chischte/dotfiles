@@ -151,6 +151,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 export PATH="/snap/bin:$PATH"
 alias eclipsejava="cd /opt/eclipsejava/eclipse; ./eclipse"
 alias eclipsecpp="cd /opt/eclipsecpp/eclipse; ./eclipse"
+alias eclipsearduino=" cd /opt/eclipsearduino/sloeber ; ./sloeber-ide"
 alias dotgit="/usr/bin/git --git-dir=$HOME/git/dotfiles/ --work-tree=$HOME"
 export PATH="/opt/arduino-1.8.9:$PATH"
 
