@@ -143,7 +143,7 @@ alias resync="
 onedrive --synchronize --resync"
 
 alias todo="
-libreoffice ~/SyncBox/00_INFORMATIK/00_TS_INFORMATIK/MASTER_ToDo_LIST.xlsx"
+libreoffice ~/SyncBox/MASTER_ToDo_LIST.xlsx"
 #######################################
 export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH
