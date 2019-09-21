@@ -119,7 +119,7 @@ fi
 
 #######################################
 #######################################
-#aliases "hi, hey and bye"
+#aliases
 
 alias hi="
 osync; onedrive --monitor"
@@ -144,14 +144,16 @@ onedrive --synchronize --resync"
 
 alias todo="
 libreoffice ~/SyncBox/00/MasterToDoList.xlsx"
-#######################################
-export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
-export PATH=$JAVA_HOME/bin:$PATH
-#export PATH="/opt/eclipse:$PATH"
-export PATH="/snap/bin:$PATH"
+
 alias eclipsejava="cd /opt/eclipsejava/eclipse; ./eclipse"
 alias eclipsecpp="cd /opt/eclipsecpp/eclipse; ./eclipse"
 alias eclipsearduino=" cd /opt/eclipsearduino/sloeber ; ./sloeber-ide"
 alias dotgit="/usr/bin/git --git-dir=$HOME/git/dotfiles/ --work-tree=$HOME"
+#######################################
+export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+
+export PATH="/snap/bin:$PATH"
 export PATH="/opt/arduino-1.8.9:$PATH"
+export PATH="/opt/gitkraken:$PATH"
 
