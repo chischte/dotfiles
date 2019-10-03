@@ -146,6 +146,8 @@ alias todo="
 libreoffice ~/SyncBox/00/MasterToDoList.xlsx &disown; exit"
 
 alias coursera="cd ~/SyncBox/00_INFORMATIK/01_LEARNING_C; libreoffice Coursera_Programming_Fundamentals_Cheat_Sheet.odt &disown; exit"
+
+alias libreoffice="libreoffice &disown; exit"
 #######################################
 alias eclipsejava="cd /opt/eclipsejava/eclipse; ./eclipse &disown; exit"
 alias eclipsecpp="cd /opt/eclipsecpp/eclipse; ./eclipse &diswon;exit"
