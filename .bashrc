@@ -145,11 +145,11 @@ onedrive --synchronize --resync"
 alias todo="
 libreoffice ~/SyncBox/00/MasterToDoList.xlsx &disown; exit"
 
+alias coursera="cd ~/SyncBox/00_INFORMATIK/01_LEARNING_C; libreoffice Coursera_Programming_Fundamentals_Cheat_Sheet.odt &disown; exit"
 #######################################
 alias eclipsejava="cd /opt/eclipsejava/eclipse; ./eclipse &disown; exit"
 alias eclipsecpp="cd /opt/eclipsecpp/eclipse; ./eclipse &diswon;exit"
 alias eclipsearduino=" cd /opt/eclipsearduino/sloeber; ./sloeber-ide &disown ; exit"
-alias gitkraken="gitkraken &disown; exit"
 #######################################
 alias firefox=" firefox &disown ; exit"
 alias dotgit="/usr/bin/git --git-dir=$HOME/git/dotfiles/ --work-tree=$HOME"
@@ -161,4 +161,3 @@ export PATH="/snap/bin:$PATH"
 export PATH="/opt/arduino-1.8.9:$PATH"
 export PATH="/opt/gitkraken:$PATH"
 
-alias coursera="cd ~/SyncBox/01_INFORMATIK/01_LEARNING_C; libreoffice Coursera_Programming_Fundamentals_Cheat_Sheet.odt &disown; exit"
