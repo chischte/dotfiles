@@ -156,7 +156,7 @@ alias eclipsearduino=" cd /opt/eclipsearduino/sloeber; ./sloeber-ide &disown ; e
 alias firefox=" firefox &disown ; exit"
 alias dotgit="/usr/bin/git --git-dir=$HOME/git/dotfiles/ --work-tree=$HOME"
 #######################################
-export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
+export JAVA_HOME=$usr/lib/jvm/java-13-oracle
 export PATH=$JAVA_HOME/bin:$PATH
 
 export PATH="/snap/bin:$PATH"
