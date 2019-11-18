@@ -131,7 +131,7 @@ alias bye="
 osync; poweroff"
 
 alias rememberer="
-cd ~/SyncBox/00_INFORMATIK/; vim rememberer.txt"
+cd ~/git/rememberer/; vim rememberer.txt"
 
 alias ts="
 cd ~/SyncBox/00_INFORMATIK/00_TS_INFORMATIK/"
