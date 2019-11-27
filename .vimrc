@@ -29,3 +29,4 @@ let xml_syntax_folding=1      " XML
 " means: you can undo even after closing a buffer or even after closing vim
 set undodir=~/.vim/temp/undo
 set undofile
+imap jj <Esc>
