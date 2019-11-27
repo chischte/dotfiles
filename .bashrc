@@ -152,6 +152,12 @@ alias libre="libreoffice &disown; exit"
 alias eclipsejava="cd /opt/eclipsejava/eclipse; ./eclipse &disown; exit"
 alias eclipsecpp="cd /opt/eclipsecpp/eclipse; ./eclipse &diswon;exit"
 alias eclipsearduino=" cd /opt/eclipsearduino/sloeber; ./sloeber-ide &disown ; exit"
+alias eclipsephp=" cd /opt/eclipsephp/eclipse; ./eclipse &disown ; exit"
+#######################################
+#######################################
+#######################################
+#######################################
+alias eclipsearduino=" cd /opt/eclipsearduino/sloeber; ./sloeber-ide &disown ; exit"
 #######################################
 alias firefox=" firefox &disown ; exit"
 alias dotgit="/usr/bin/git --git-dir=$HOME/git/dotfiles/ --work-tree=$HOME"
