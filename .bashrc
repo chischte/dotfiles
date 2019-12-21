@@ -154,14 +154,18 @@ alias eclipsecpp="cd /opt/eclipsecpp/eclipse; ./eclipse &diswon;exit"
 alias eclipsearduino=" cd /opt/eclipsearduino/sloeber; ./sloeber-ide &disown ; exit"
 alias eclipsephp=" cd /opt/eclipsephp/eclipse; ./eclipse &disown ; exit"
 #######################################
+alias sshgit="rsync -avz -e 'ssh' /home/realslimshady/sshgit/ michi@55.55.55.55:/home/michi/sshgit/;rsync -avz -e 'ssh' /home/realslimshady/sshgit/ michi@55.55.55.66:/home/michi/sshgit/"
 #######################################
-#######################################
+alias sshgitsync="rsync -avz -e 'ssh -p 2022' /home/realslimshady/sshgit/ michi@machinelogger.synology.me:/home/michi/sshgit/; rsync -avz -e 'ssh -p 2023' /home/realslimshady/sshgit/ michi@machinelogger.synology.me:/home/michi/sshgit/"
+alias sshcamerapi="ssh -p 2023 michi@machinelogger.synology.me"
+alias sshserverpi="ssh -p 2022 michi@machinelogger.synology.me"
 #######################################
 alias eclipsearduino=" cd /opt/eclipsearduino/sloeber; ./sloeber-ide &disown ; exit"
 #######################################
 alias firefox=" firefox &disown ; exit"
 alias dotgit="/usr/bin/git --git-dir=$HOME/git/dotfiles/ --work-tree=$HOME"
 alias visualparadigm="cd /opt/Visual_Paradigm_CE_16.0/bin; ./Visual_Paradigm &disown; exit" 
+
 #######################################
 export JAVA_HOME=$usr/lib/jvm/java-13-oracle
 export PATH=$JAVA_HOME/bin:$PATH
