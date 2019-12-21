@@ -156,7 +156,7 @@ alias eclipsephp=" cd /opt/eclipsephp/eclipse; ./eclipse &disown ; exit"
 #######################################
 alias sshgit="rsync -avz -e 'ssh' /home/realslimshady/sshgit/ michi@55.55.55.55:/home/michi/sshgit/;rsync -avz -e 'ssh' /home/realslimshady/sshgit/ michi@55.55.55.66:/home/michi/sshgit/"
 #######################################
-alias sshgitsync="rsync -avz -e 'ssh -p 2022' /home/realslimshady/sshgit/ michi@machinelogger.synology.me:/home/michi/sshgit/; rsync -avz -e 'ssh -p 2023' /home/realslimshady/sshgit/ michi@machinelogger.synology.me:/home/michi/sshgit/"
+alias sshsync="rsync -avz -e 'ssh -p 2022' /home/realslimshady/sshgit/ michi@machinelogger.synology.me:/home/michi/sshgit/; rsync -avz -e 'ssh -p 2023' /home/realslimshady/sshgit/ michi@machinelogger.synology.me:/home/michi/sshgit/"
 alias sshcamerapi="ssh -p 2023 michi@machinelogger.synology.me"
 alias sshserverpi="ssh -p 2022 michi@machinelogger.synology.me"
 #######################################
