@@ -165,7 +165,6 @@ alias eclipsearduino=" cd /opt/eclipsearduino/sloeber; ./sloeber-ide &disown ; e
 alias firefox=" firefox &disown ; exit"
 alias dotgit="/usr/bin/git --git-dir=$HOME/git/dotfiles/ --work-tree=$HOME"
 alias visualparadigm="cd /opt/Visual_Paradigm_CE_16.0/bin; ./Visual_Paradigm &disown; exit" 
-
 #######################################
 export JAVA_HOME=$usr/lib/jvm/java-13-oracle
 export PATH=$JAVA_HOME/bin:$PATH
